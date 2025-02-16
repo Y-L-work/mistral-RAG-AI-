@@ -1,0 +1,12 @@
+langchain>=0.3.18
+langchain-mistralai>=0.2.6
+sentence-transformers
+transformers
+torch
+faiss-cpu
+beautifulsoup4
+requests
+flask
+gradio
+mistralai
+python-dotenv
