@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+venv/
+.env
+
+# Logs
+*.log
+
+# Data
+data/cache/
+data/sources/
+
+# Models (避免上傳大檔案)
+D:/huggingface_models/
+D:/faiss_index/
