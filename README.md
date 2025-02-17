@@ -24,7 +24,7 @@ mistral-RAG 是一款結合 Retrieval-Augmented Generation (RAG) 技術的 AI �
 ---
 
 ## **🛠️ 技術架構**
-![劉1](https://github.com/user-attachments/assets/7b73179e-0213-4dbb-b034-833f0e98043e)![劉2](https://github.com/user-attachments/assets/31a4a4b6-de37-4540-b5fd-793eb0191105)![劉3](https://github.com/user-attachments/assets/2c9416cb-cb7a-420b-ba55-4f29c639b8de)
+![劉1](https://github.com/user-attachments/assets/7b73179e-0213-4dbb-b034-833f0e98043e)![1739761523152](https://github.com/user-attachments/assets/cfcdad0f-fbdc-41c6-9f76-3692cb1eb1bc)![劉3](https://github.com/user-attachments/assets/2c9416cb-cb7a-420b-ba55-4f29c639b8de)
 
 🔹 **核心技術棧：**
 
