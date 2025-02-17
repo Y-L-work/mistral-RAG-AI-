@@ -20,42 +20,11 @@ mistral-RAG 是一款結合 Retrieval-Augmented Generation (RAG) 技術的 AI �
 -  **n8n 自動化整合**：透過 **Webhook** 讓查詢和知識庫更新全自動。
 -  **免費 & 本地部署**：使用 Hugging Face 免費模型，適合本地運行，無需額外 API 費用。
 
+
 ---
 
 ## **🛠️ 技術架構**
-
-flowchart TD
-    %% Input & Preprocessing 區塊
-    subgraph "Input & Preprocessing"
-      A[User Query] -->|Rewrite| B[Query Rewriting]
-      B -->|Web Scraping| C[Scraper]
-      C -->|Chunking| D[Text Splitter]
-    end
-
-    %% Embedding & Retrieval 區塊
-    subgraph "Embedding & Retrieval"
-      D -->|Embedding| E[Vector Store (FAISS)]
-      A -->|Embedding| E
-      E -->|Retrieve Top-K| F[Retriever]
-    end
-
-    %% Response Generation 區塊
-    subgraph "Response Generation"
-      F -->|Format Prompt| G[Prompt Builder]
-      G -->|Generate Answer| H[Mistral AI]
-      H -->|Return Response| I[Chatbot]
-      I -->|Send to User| J[User]
-    end
-
-    %% 節點樣式設定
-    classDef startEnd fill:#c3e6cb,stroke:#155724,stroke-width:2px;
-    classDef process fill:#bee5eb,stroke:#0c5460,stroke-width:2px;
-    class A,J startEnd;
-    class B,C,D,E,F,G,H,I process;
-
-    %% 連線樣式設定
-    linkStyle default stroke:#6c757d,stroke-width:2px;
-
+![劉1](https://github.com/user-attachments/assets/7b73179e-0213-4dbb-b034-833f0e98043e)![劉2](https://github.com/user-attachments/assets/31a4a4b6-de37-4540-b5fd-793eb0191105)![劉3](https://github.com/user-attachments/assets/2c9416cb-cb7a-420b-ba55-4f29c639b8de)
 
 🔹 **核心技術棧：**
 
