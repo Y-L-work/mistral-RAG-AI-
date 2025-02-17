@@ -13,12 +13,12 @@ mistral-RAG 是一款結合 Retrieval-Augmented Generation (RAG) 技術的 AI �
 
 🚀 **主要特色：**
 
-- ✅ **檢索增強生成 (RAG)**：結合 FAISS 向量檢索與 Mistral AI 提供準確回應。
-- ✅ **查詢重寫 (Query Rewriting)**：優化用戶輸入，使檢索結果更精準。
-- ✅ **多輪對話記憶 (Conversational Memory)**：能夠記住對話歷史。
-- ✅ **網頁爬取 (Web Scraping)**：透過 **BeautifulSoup + Requests** 自動擷取最新資訊。
-- ✅ **n8n 自動化整合**：透過 **Webhook** 讓查詢和知識庫更新全自動。
-- ✅ **免費 & 本地部署**：使用 Hugging Face 免費模型，適合本地運行，無需額外 API 費用。
+-  **檢索增強生成 (RAG)**：結合 FAISS 向量檢索與 Mistral AI 提供準確回應。
+-  **查詢重寫 (Query Rewriting)**：優化用戶輸入，使檢索結果更精準。
+-  **多輪對話記憶 (Conversational Memory)**：能夠記住對話歷史。
+-  **網頁爬取 (Web Scraping)**：透過 **BeautifulSoup + Requests** 自動擷取最新資訊。
+-  **n8n 自動化整合**：透過 **Webhook** 讓查詢和知識庫更新全自動。
+-  **免費 & 本地部署**：使用 Hugging Face 免費模型，適合本地運行，無需額外 API 費用。
 
 ---
 
