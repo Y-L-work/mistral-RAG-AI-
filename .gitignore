@@ -19,3 +19,6 @@ D:/faiss_index/
 
 # 忽略 mistral-RAG-AI-
 mistral-RAG-AI-/
+
+# 忽略所有 torch wheel 檔案
+packages/torch-*.whl
