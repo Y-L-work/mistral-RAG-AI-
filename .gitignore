@@ -16,3 +16,6 @@ data/sources/
 # Models (避免上傳大檔案)
 D:/huggingface_models/
 D:/faiss_index/
+
+# 忽略 mistral-RAG-AI-
+mistral-RAG-AI-/
