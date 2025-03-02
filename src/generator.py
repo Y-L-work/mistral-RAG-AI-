@@ -1,6 +1,7 @@
 import time
 from mistralai import Mistral
-from .config import MISTRAL_API_KEY, MISTRAL_MODEL
+from src.config import MISTRAL_API_KEY, MISTRAL_MODEL
+
 
 class Generator:
     def __init__(self):

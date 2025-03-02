@@ -1,0 +1,18 @@
+services:
+  flask_api:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./src:/app/src
+      - ./web:/app/web
+      - ./packages:/app/packages
+      - D:/faiss_index:/faiss_index  # ✅ 掛載 FAISS 向量庫
+    env_file: .env
+    networks:
+      - n8n_network
+    restart: unless-stopped
+
+networks:
+  n8n_network:
+    external: true

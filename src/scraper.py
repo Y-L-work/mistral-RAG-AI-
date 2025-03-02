@@ -1,6 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
-from .utils import clean_text
+from src.utils import clean_text
+
 
 def scrape_url(url):
     """
