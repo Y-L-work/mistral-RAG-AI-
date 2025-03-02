@@ -94,7 +94,7 @@ docker-compose up --build
 docker run -p 8001:8001 mistral-rag-api
 ```
 
-📌 **面試官只需執行 `docker-compose up` 即可快速測試專案！**
+📌 **只需執行 `docker-compose up` 即可快速測試專案！**
 
 ---
 
