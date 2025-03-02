@@ -4,7 +4,7 @@ side project
 
 ## 📌 專案簡介
 
-mistral-RAG 是一款結合 **Mistral-7B-Instruct GPTQ**、**Retrieval-Augmented Generation (RAG)** 技術的 AI 聊天機器人，
+mistral-RAG 是一款結合 **大型語言模型 Mistral-7B-Instruct GPTQ**、**Retrieval-Augmented Generation (RAG)** 技術的 AI 聊天機器人，
 具備 **多輪對話記憶**、**查詢重寫 (Query Rewriting)**、**網頁爬取 (Web Scraping)**、
 **向量檢索 (Vector Retrieval)**，透過 **Mistral AI** 生成高品質回應。
 
