@@ -20,7 +20,7 @@ mistral-RAG 是一款結合 **大型語言模型 Mistral-7B-Instruct GPTQ**、**
 ✅ Flask API 已成功運行
 ✅ FAISS 向量檢索已部署
 ✅ Mistral AI 生成回應正常運行
-✅ Docker 環境準備中
+✅ Docker 環境部屬完成
 ⏸ n8n 整合暫時停止，未來再優化
 
 ---
