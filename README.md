@@ -23,7 +23,7 @@
 
 ## 📖 專案簡介
 
-`mistral-RAG` 是一個免費、開源且可本地部署的 AI 對話系統，結合了最新的 **RAG 技術** 與 **Mistral-7B-Instruct GPTQ** 模型，提供高品質且精準的自動化回答系統。
+**mistral-RAG** 是一個免費、開源且可本地部署的 AI 對話系統，結合了最新的 **RAG 技術** 與 **Mistral-7B-Instruct GPTQ** 模型，提供高品質且精準的自動化回答系統。
 
 ---
 
