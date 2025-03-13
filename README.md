@@ -5,19 +5,20 @@
 </p>
 
 <p align="center">
-<a href="https://github.com/Y-L-work/mistral-RAG-AI/stargazers">
-  <img src="https://img.shields.io/github/stars/Y-L-work/mistral-RAG-AI?style=social" alt="Stars">
+<a href="https://github.com/Y-L-work/mistral-RAG-AI-/stargazers">
+  <img src="https://img.shields.io/github/stars/Y-L-work/mistral-RAG-AI-?style=social" alt="Stars">
 </a>
-<a href="https://github.com/Y-L-work/mistral-RAG-AI/network/members">
-  <img src="https://img.shields.io/github/forks/Y-L-work/mistral-RAG-AI?style=social" alt="Forks">
+<a href="https://github.com/Y-L-work/mistral-RAG-AI-/network/members">
+  <img src="https://img.shields.io/github/forks/Y-L-work/mistral-RAG-AI-?style=social" alt="Forks">
 </a>
-<a href="https://github.com/Y-L-work/mistral-RAG-AI/issues">
-  <img src="https://img.shields.io/github/issues/Y-L-work/mistral-RAG-AI" alt="Issues">
+<a href="https://github.com/Y-L-work/mistral-RAG-AI-/issues">
+  <img src="https://img.shields.io/github/issues/Y-L-work/mistral-RAG-AI-" alt="Issues">
 </a>
-<a href="https://github.com/Y-L-work/mistral-RAG-AI/blob/main/LICENSE">
-  <img src="https://img.shields.io/github/license/Y-L-work/mistral-RAG-AI" alt="License">
+<a href="https://github.com/Y-L-work/mistral-RAG-AI-/blob/main/LICENSE">
+  <img src="https://img.shields.io/github/license/Y-L-work/mistral-RAG-AI-" alt="License">
 </a>
 </p>
+
 
 ---
 
