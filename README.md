@@ -70,7 +70,7 @@ mistral-RAG/
 ├── docker-compose.yml
 ├── requirements.txt
 └── .env
-
+```
 ---
 
 ##  快速開始
