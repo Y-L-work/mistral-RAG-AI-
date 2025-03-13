@@ -1,4 +1,4 @@
-<h1 align="center">🚀 mistral-RAG: 自動化 AI 檢索與對話系統</h1>
+<h1 align="center"> mistral-RAG: 自動化 AI 檢索與對話系統</h1>
 
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=200&section=header&text=mistral-RAG&fontSize=60&animation=fadeIn" alt="mistral-RAG Banner"/>
