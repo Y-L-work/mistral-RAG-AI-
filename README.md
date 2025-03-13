@@ -1,97 +1,154 @@
-# mistral-RAG: 自動化 AI 檢索與對話系統
+<h1 align="center">🚀 mistral-RAG: 自動化 AI 檢索與對話系統</h1>
 
-![GitHub Repo stars](https://img.shields.io/github/stars/Y-L-work/mistral-RAG-AI?style=flat-square)
-![GitHub forks](https://img.shields.io/github/forks/Y-L-work/mistral-RAG-AI?style=flat-square)
-![GitHub last commit](https://img.shields.io/github/last-commit/Y-L-work/mistral-RAG-AI?color=blue&style=flat-square)
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=200&section=header&text=mistral-RAG&fontSize=60&animation=fadeIn" alt="mistral-RAG Banner"/>
+</p>
 
-## 專案簡介
+<p align="center">
+<a href="https://github.com/Y-L-work/mistral-RAG-AI/stargazers">
+  <img src="https://img.shields.io/github/stars/Y-L-work/mistral-RAG-AI?style=social" alt="Stars">
+</a>
+<a href="https://github.com/Y-L-work/mistral-RAG-AI/network/members">
+  <img src="https://img.shields.io/github/forks/Y-L-work/mistral-RAG-AI?style=social" alt="Forks">
+</a>
+<a href="https://github.com/Y-L-work/mistral-RAG-AI/issues">
+  <img src="https://img.shields.io/github/issues/Y-L-work/mistral-RAG-AI" alt="Issues">
+</a>
+<a href="https://github.com/Y-L-work/mistral-RAG-AI/blob/main/LICENSE">
+  <img src="https://img.shields.io/github/license/Y-L-work/mistral-RAG-AI" alt="License">
+</a>
+</p>
 
-mistral-RAG 是一個以 Mistral AI 模型及檢索增強生成（RAG）技術開發的聊天機器人，能自動進行網頁資料抓取、問題優化處理及向量檢索，透過本地端運行 Mistral AI 模型提供精確且有來源依據的回答。
+---
 
-![專案架構圖](https://raw.githubusercontent.com/Y-L-work/mistral-RAG-AI/main/assets/project-architecture.png)
+## 📖 專案簡介
 
-## 主要功能
+`mistral-RAG` 是一個免費、開源且可本地部署的 AI 對話系統，結合了最新的 **RAG 技術** 與 **Mistral-7B-Instruct GPTQ** 模型，提供高品質且精準的自動化回答系統。
 
-- ![FAISS](https://img.shields.io/badge/vector%20search-FAISS-blue?style=for-the-badge)
-- ![Mistral AI](https://img.shields.io/badge/model-Mistral--7B--GPTQ-yellow?style=for-the-badge)
-- ![BeautifulSoup](https://img.shields.io/badge/web%20scraping-BeautifulSoup-green?style=for-the-badge)
-- ![Flask](https://img.shields.io/badge/API-Flask-orange?style=for-the-badge)
-- ![Local Deployment](https://img.shields.io/badge/deployment-local-lightgrey?style=for-the-badge)
+---
 
-## 技術架構
+## ✨ 功能特色
 
-- **大型語言模型 (LLM)**：Mistral-7B-Instruct GPTQ (量化模型)
-- **向量索引與檢索**：FAISS + HuggingFace Sentence Transformers
-- **網頁爬取**：BeautifulSoup + Requests
-- **API 服務**：Flask + Waitress
-- **資料儲存**：SQLite / JSON-based Memory
+- ✅ **檢索增強生成 (RAG)** — 提升答案準確性
+- ✅ **查詢重寫 (Query Rewriting)** — 自動調整、優化問題
+- ✅ **多輪對話記憶 (Conversational Memory)** — 記住並理解對話歷史
+- ✅ **網頁爬取 (Web Scraping)** — 即時獲取最新資訊
+- ✅ **免費 & 本地部署** — 無須付費 API，本地運行更安全
 
-![示範 GIF](https://raw.githubusercontent.com/Y-L-work/mistral-RAG-AI/main/assets/demo.gif)
+---
 
-## 專案結構
+## 🛠️ 技術架構
 
-```
+| 類別                 | 工具 & 技術                               |
+|---------------------|------------------------------------------|
+| 🌐 **網頁爬取**     | BeautifulSoup、Requests                   |
+| 🧠 **LLM**          | Mistral-7B-Instruct (GPTQ 量化)           |
+| 📚 **向量檢索**      | HuggingFace 嵌入 + FAISS                  |
+| 💾 **儲存與記憶**     | SQLite、JSON、LangChain Memory Buffer     |
+| 🚢 **容器化部署**     | Docker, Docker Compose                   |
+| ⚙️ **流程自動化**     | n8n（暫時停止）                            |
+
+---
+
+## 📂 專案目錄
+
+```plaintext
 mistral-RAG/
-├── data/                 # 處理後的文本與向量資料
-│    └── sources/         # 原始抓取的網頁內容
-├── models/               # Hugging Face 量化模型
-├── src/                  # 核心功能模組
-│    ├── scraper.py       # 網頁爬取
-│    ├── retriever.py     # 向量索引與檢索
-│    ├── generator.py     # 模型推理生成
-│    └── config.py        # 專案設定
-├── web/                  # Flask API
-│    └── app.py           # API 主要程式
-├── docker-compose.yml    # Docker Compose 配置
-├── Dockerfile            # Docker 環境設定
-├── requirements.txt      # Python 依賴套件
-└── .env                  # API 金鑰設定
-```
+├── data/                # 儲存處理過的文本與嵌入
+│    ├── sources/        # 原始爬取文本
+├── src/
+│    ├── generator.py   # AI 回應生成 (Mistral AI)
+│    ├── retriever.py   # 向量檢索 (FAISS)
+│    ├── scraper.py     # 網頁爬取
+│    ├── config.py      # 設定檔
+├── web/
+│    ├── app.py         # Flask API 入口點
+│    ├── serve.py       # WSGI 伺服器
+├── Dockerfile
+├── docker-compose.yml
+├── requirements.txt
+└── .env
 
-## 安裝與執行
+---
 
-1. 安裝套件
+## 🚀 快速開始
+
+### 1️⃣ 安裝環境
 
 ```bash
 pip install -r requirements.txt
 ```
 
-2. 設定 `.env` 檔案
-
-```ini
-MISTRAL_API_KEY=你的_API_Key
-FLASK_API_KEY=你的安全金鑰
-```
-
-3. 啟動服務
+### 2️⃣ 運行系統
 
 ```bash
-python web/app.py
+python src/scraper.py          # 爬取數據
+python src/retriever.py        # 建立 FAISS 索引
+python web/app.py              # 啟動 Flask API
 ```
 
-API 運行位置：[http://localhost:8001/](http://localhost:8001)
+👉 API 運行於：[http://localhost:8001](http://localhost:8001)
 
-## Docker 部署
+---
 
-透過 Docker Compose 快速部署 API：
+## 🐳 Docker 部署
+
+快速透過 Docker Compose 部署系統：
 
 ```bash
 docker-compose up --build
 ```
 
-使用 curl 測試 API 是否正常運作：
+---
+
+## 🎯 API 使用範例
 
 ```bash
 curl -X POST "http://localhost:8001/query" \
      -H "Content-Type: application/json" \
-     -d '{"query": "RAG 是什麼？"}'
+     -d '{"query": "什麼是 RAG 技術？"}'
 ```
 
-## 未來計畫
+**🔖 成功回應範例：**
 
-- n8n 自動化流程串接
-- Line Bot 與 Discord Bot 支援
-- 混合檢索技術（FAISS + BM25）提升效果
+```json
+{
+  "answer": "RAG (Retrieval-Augmented Generation) 是一種結合資訊檢索與生成模型的技術，用來提高回答的準確性和即時性。"
+}
+```
 
-專案現已初步完成，之後有空時會再逐步優化更新。
+---
+
+## 📊 GitHub 活動
+
+![GitHub Activity](https://github-readme-activity-graph.vercel.app/graph?username=Y-L-work&theme=react-dark)
+
+---
+
+## 🌟 未來規劃
+
+- ✅ **查詢優化與路由**
+- ✅ **Line / Discord / Telegram 整合**
+- ✅ **強化檢索技術（Hybrid Search: FAISS + BM25）**
+- ⏸️ **n8n 完整流程自動化（暫停中）**
+
+---
+
+## 🎖️ 貢獻者
+
+[![Contributors](https://contrib.rocks/image?repo=Y-L-work/mistral-RAG-AI)](https://github.com/Y-L-work/mistral-RAG-AI/graphs/contributors)
+
+---
+
+## 🔖 License
+
+專案以 [MIT License](LICENSE) 授權。
+
+---
+
+
+
+<p align="center">
+🌟 喜歡本專案的話，記得給個 ⭐ 支持一下喔！
+</p>
 
