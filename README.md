@@ -27,13 +27,13 @@
 
 ---
 
-## ✨ 功能特色
+##  功能特色
 
-- ✅ **檢索增強生成 (RAG)** — 提升答案準確性
-- ✅ **查詢重寫 (Query Rewriting)** — 自動調整、優化問題
-- ✅ **多輪對話記憶 (Conversational Memory)** — 記住並理解對話歷史
-- ✅ **網頁爬取 (Web Scraping)** — 即時獲取最新資訊
-- ✅ **免費 & 本地部署** — 無須付費 API，本地運行更安全
+- 🔹 **檢索增強生成 (RAG)** — 提升答案準確性
+- 🔹 **查詢重寫 (Query Rewriting)** — 自動調整、優化問題
+- 🔹 **多輪對話記憶 (Conversational Memory)** — 記住並理解對話歷史
+- 🔹 **網頁爬取 (Web Scraping)** — 即時獲取最新資訊
+- 🔹 **免費 & 本地部署** — 無須付費 API，本地運行更安全
 
 ---
 
@@ -71,7 +71,7 @@ mistral-RAG/
 
 ---
 
-## 🚀 快速開始
+##  快速開始
 
 ### 1️⃣ 安裝環境
 
@@ -101,7 +101,7 @@ docker-compose up --build
 
 ---
 
-## 🎯 API 使用範例
+##  API 使用範例
 
 ```bash
 curl -X POST "http://localhost:8001/query" \
@@ -125,15 +125,15 @@ curl -X POST "http://localhost:8001/query" \
 
 ---
 
-## 🌟 未來規劃
+##  未來規劃
 
-- ✅ **查詢優化與路由**
-- ✅ **Line / Discord / Telegram 整合**
-- ✅ **強化檢索技術（Hybrid Search: FAISS + BM25）**
+- 🔹 **查詢優化與路由**
+- 🔹 **Line / Discord / Telegram 整合**
+- 🔹 **強化檢索技術（Hybrid Search: FAISS + BM25）**
 - ⏸️ **n8n 完整流程自動化（暫停中）**
 
 
 <p align="center">
-🌟 喜歡本專案的話，記得給個 ⭐ 支持一下喔！
+ 喜歡本專案的話，記得給個 ⭐ 支持一下喔！
 </p>
 
