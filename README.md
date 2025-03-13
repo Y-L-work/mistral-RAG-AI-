@@ -41,7 +41,7 @@
 
 **主要技術與工具**
 
-| 🚀 類別 | 🛠️ 工具 & 技術 |
+|  類別 | 🛠️ 工具 & 技術 |
 |--------|----------------------|
 | 🌐 **網頁爬取** | ![BeautifulSoup](https://img.shields.io/badge/BeautifulSoup-4B8BBE?style=for-the-badge&logo=python&logoColor=white) ![Requests](https://img.shields.io/badge/Requests-CC0000?style=for-the-badge&logo=python&logoColor=white) |
 | 🧠 **LLM** | ![Mistral-7B](https://img.shields.io/badge/Mistral_7B-Instruct-6A5ACD?style=for-the-badge&logo=ai) ![GPTQ](https://img.shields.io/badge/GPTQ-Quantized-FFA500?style=for-the-badge&logo=pytorch) |
