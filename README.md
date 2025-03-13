@@ -132,21 +132,6 @@ curl -X POST "http://localhost:8001/query" \
 - ✅ **強化檢索技術（Hybrid Search: FAISS + BM25）**
 - ⏸️ **n8n 完整流程自動化（暫停中）**
 
----
-
-## 🎖️ 貢獻者
-
-[![Contributors](https://contrib.rocks/image?repo=Y-L-work/mistral-RAG-AI)](https://github.com/Y-L-work/mistral-RAG-AI/graphs/contributors)
-
----
-
-## 🔖 License
-
-專案以 [MIT License](LICENSE) 授權。
-
----
-
-
 
 <p align="center">
 🌟 喜歡本專案的話，記得給個 ⭐ 支持一下喔！
