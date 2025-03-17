@@ -85,7 +85,7 @@ pip install -r requirements.txt
 ### 2️⃣ 運行系統
 
 ```bash
-python src/scraper.py          # 爬取數據
+python src/scraper.py          # 爬取資料
 python src/retriever.py        # 建立 FAISS 索引
 python web/app.py              # 啟動 Flask API
 ```
