@@ -104,12 +104,10 @@ docker-compose up --build
 
 ---
 
-##  API 使用範例
+##  API 使用範例 在PowerShell下執行
 
 ```bash
-curl -X POST "http://localhost:8001/query" \
-     -H "Content-Type: application/json" \
-     -d '{"query": "什麼是 RAG 技術？"}'
+Invoke-RestMethod -Method Post -Uri "http://localhost:8000/query" -ContentType "application/json" -Body '{"query": "什麼是 RAG 技術？"}'
 ```
 
 **🔖 成功回應範例：**
