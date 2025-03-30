@@ -90,7 +90,7 @@ python src/retriever.py        # 建立 FAISS 索引
 python web/app.py              # 啟動 Flask API
 ```
 
-👉 API 運行於：[http://localhost:8001](http://localhost:8001)
+👉 API 運行於：[http://localhost:8000](http://localhost:8000)
 
 ---
 
