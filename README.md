@@ -90,7 +90,7 @@ python src/retriever.py        # 建立 FAISS 索引
 python web/app.py              # 啟動 Flask API
 ```
 
-👉 API 運行於：[http://localhost:8000](http://localhost:8000)
+👉 API 運行於：[https://funny-tidy-raven.ngrok-free.app/](https://funny-tidy-raven.ngrok-free.app/)
 
 ---
 
