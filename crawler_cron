@@ -1,0 +1,2 @@
+0 12 * * * root python /app/Crawler_AI_news.py >> /var/log/cron.log 2>&1
+15 12 * * * root python /app/src/update_vector_store.py >> /var/log/update_vector_store.log 2>&1

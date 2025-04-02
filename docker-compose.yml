@@ -1,17 +1,49 @@
 services:
   flask_api:
     build: .
+    command: ["python", "-m", "web.serve"]
     ports:
       - "8000:8000"
     volumes:
       - ./src:/app/src
       - ./web:/app/web
-      - ./packages:/app/packages
-      - D:/faiss_index:/faiss_index  # ✅ 掛載 FAISS 向量庫
+      - ./data:/app/data
+      - ./packages_linux:/app/packages
+      - D:/faiss_index:/faiss_index
+      - D:/news_data:/news_data
     env_file: .env
     networks:
       - n8n_network
     restart: unless-stopped
+
+  news_crawler:
+    build:
+      context: .
+      dockerfile: Dockerfile.crawler
+    volumes:
+      - ./src:/app/src
+      - ./packages_linux:/app/packages
+      - D:/news_data:/news_data
+      - D:/faiss_index:/faiss_index   # 新增此行，掛載主機 D:\faiss_index 至容器 /faiss_index
+    env_file: .env
+    environment:
+      - PYTHONPATH=/app
+    networks:
+      - n8n_network
+    restart: unless-stopped
+
+  ngrok:
+    image: wernight/ngrok
+    command: ngrok http --hostname=funny-tidy-raven.ngrok-free.app flask_api:8000
+    env_file: .env
+    environment:
+      - NGROK_AUTHTOKEN=${NGROK_AUTHTOKEN}
+    ports:
+      - "4040:4040"
+    depends_on:
+      - flask_api
+    networks:
+      - n8n_network
 
 networks:
   n8n_network:

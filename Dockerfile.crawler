@@ -1,0 +1,38 @@
+# Dockerfile.crawler
+FROM python:3.9-slim
+
+# 將 /app 加入 PYTHONPATH，讓 src 模組能正確匯入
+ENV PYTHONPATH="/app"
+
+# 安裝 cron
+RUN apt-get update && apt-get install -y cron
+
+WORKDIR /app
+
+# 複製 requirements.txt 與 Linux-compatible 的輪子檔案（來源改為 packages_linux）
+COPY requirements.txt /app/
+COPY packages_linux /app/packages/
+
+# 安裝 Python 套件
+RUN pip install --default-timeout=12000 --no-cache-dir --find-links=/app/packages -r requirements.txt
+
+# 複製專案程式碼（包含 src 資料夾與爬蟲主程式）
+COPY src/ /app/src/
+COPY src/Crawler_AI_news.py /app/Crawler_AI_news.py
+
+# 建立新聞資料存放目錄（容器內 /news_data 對應主機 D:/news_data）
+RUN mkdir -p /news_data
+
+# 複製 cron job 設定檔
+COPY crawler_cron /etc/cron.d/crawler_cron
+RUN chmod 0644 /etc/cron.d/crawler_cron && crontab /etc/cron.d/crawler_cron
+
+# 建立 log 檔案
+RUN touch /var/log/cron.log
+
+# 複製 entrypoint 腳本，並設定執行權限
+COPY entrypoint.sh /app/entrypoint.sh
+RUN chmod +x /app/entrypoint.sh
+
+# 將 entrypoint.sh 作為容器入口
+CMD ["/app/entrypoint.sh"]

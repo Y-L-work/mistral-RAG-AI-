@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>AI新聞 聊天機器人</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f4f4f4;
+    }
+    #chat-box {
+      border: 1px solid #ccc;
+      padding: 10px;
+      width: 80%;
+      height: 400px;
+      overflow-y: auto;
+      margin-bottom: 10px;
+      background-color: #fff;
+    }
+    .message {
+      margin: 10px 0;
+      padding: 8px 12px;
+      border-radius: 8px;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      line-height: 1.5;
+    }
+    .user {
+      background-color: #d1ecf1;
+      color: #0c5460;
+      text-align: left;
+    }
+    .bot {
+      background-color: #d4edda;
+      color: #155724;
+      text-align: left;
+    }
+    #announcement {
+      margin-top: 20px;
+      color: red;
+      font-weight: bold;
+    }
+    .loading-spinner {
+      border: 4px solid #f3f3f3;
+      border-top: 4px solid #3498db;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      animation: spin 1s linear infinite;
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 8px;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    /* 美化標題 */
+    .message strong {
+      display: block;
+      margin-bottom: 4px;
+    }
+  </style>
+</head>
+<body>
+  <h1>AI新聞 聊天機器人</h1>
+  <div id="chat-box"></div>
+  <form id="chat-form">
+    <input type="text" id="message-input" placeholder="輸入你的訊息..." autocomplete="off" style="width: 70%;" required />
+    <button type="submit">送出</button>
+  </form>
+  <div id="announcement">
+    公告：本聊天機器人僅提供AI新聞與AI論文相關資料，不涵蓋其他領域資訊。
+  </div>
+
+  <script>
+    const form = document.getElementById("chat-form");
+    const input = document.getElementById("message-input");
+    const chatBox = document.getElementById("chat-box");
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const userMessage = input.value.trim();
+      if (!userMessage) return;
+      
+      // 顯示使用者訊息
+      chatBox.innerHTML += `<div class="message user"><strong>你:</strong> ${userMessage}</div>`;
+      input.value = "";
+      
+      // 插入 Loading 特效
+      const loadingElement = document.createElement("div");
+      loadingElement.className = "message bot";
+      loadingElement.id = "loading";
+      loadingElement.innerHTML = `<strong>機器人:</strong> <span class="loading-spinner"></span> 正在生成回答...`;
+      chatBox.appendChild(loadingElement);
+      chatBox.scrollTop = chatBox.scrollHeight;
+
+      // 呼叫 /query API
+      try {
+        const response = await fetch("/query", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({ query: userMessage })
+        });
+        const data = await response.json();
+        const botMessage = data.answer || data.error || "無法取得回應";
+        // 移除 Loading 特效
+        if (loadingElement) loadingElement.remove();
+        // 顯示機器人回覆
+        chatBox.innerHTML += `<div class="message bot"><strong>機器人:</strong> ${botMessage}</div>`;
+      } catch (err) {
+        if (loadingElement) loadingElement.remove();
+        chatBox.innerHTML += `<div class="message bot"><strong>機器人:</strong> 發生錯誤</div>`;
+      }
+      
+      // 自動捲動到底部
+      chatBox.scrollTop = chatBox.scrollHeight;
+    });
+  </script>
+</body>
+</html>
