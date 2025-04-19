@@ -40,14 +40,14 @@
 
 ## 🛠️ 技術架構
 
-|  類別 | 🛠️ 工具 & 技術 |
+|  類別 |    工具 & 技術 |
 |--------|----------------------|
-| 🌐 **網頁爬取** | ![BeautifulSoup](https://img.shields.io/badge/BeautifulSoup-4B8BBE?style=for-the-badge&logo=python&logoColor=white) ![Requests](https://img.shields.io/badge/Requests-CC0000?style=for-the-badge&logo=python&logoColor=white) |
-| 🧠 **LLM** | ![Mistral-7B](https://img.shields.io/badge/Mistral_7B-Instruct-6A5ACD?style=for-the-badge&logo=ai) ![GPTQ](https://img.shields.io/badge/GPTQ-Quantized-FFA500?style=for-the-badge&logo=pytorch) |
-| 📚 **向量檢索** | ![sentence-transformers](https://img.shields.io/badge/sentence_transformers-FFD700?style=for-the-badge) ![FAISS](https://img.shields.io/badge/FAISS-0078D7?style=for-the-badge&logo=vector&logoColor=white) |
-| 💾 **儲存與記憶** | ![LangChain](https://img.shields.io/badge/LangChain-Memory-228B22?style=for-the-badge) |
-| 🚢 **容器化部署** | ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white) ![Docker Compose](https://img.shields.io/badge/Docker%20Compose-1488C6?style=for-the-badge&logo=docker) |
-| ⚙️ **流程自動化** | ![n8n](https://img.shields.io/badge/n8n-A259FF?style=for-the-badge&logo=n8n&logoColor=white) *(團專已經做過了，有空補上)* |
+|  🔹 **網頁爬取** | ![BeautifulSoup](https://img.shields.io/badge/BeautifulSoup-4B8BBE?style=for-the-badge&logo=python&logoColor=white) ![Requests](https://img.shields.io/badge/Requests-CC0000?style=for-the-badge&logo=python&logoColor=white) |
+|  🔹 **LLM** | ![Mistral-7B](https://img.shields.io/badge/Mistral_7B-Instruct-6A5ACD?style=for-the-badge&logo=ai) ![GPTQ](https://img.shields.io/badge/GPTQ-Quantized-FFA500?style=for-the-badge&logo=pytorch) |
+|  🔹 **向量檢索** | ![sentence-transformers](https://img.shields.io/badge/sentence_transformers-FFD700?style=for-the-badge) ![FAISS](https://img.shields.io/badge/FAISS-0078D7?style=for-the-badge&logo=vector&logoColor=white) |
+|  🔹 **儲存與記憶** | ![LangChain](https://img.shields.io/badge/LangChain-Memory-228B22?style=for-the-badge) |
+|  🔹 **容器化部署** | ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white) ![Docker Compose](https://img.shields.io/badge/Docker%20Compose-1488C6?style=for-the-badge&logo=docker) |
+|  🔹 **流程自動化** | ![n8n](https://img.shields.io/badge/n8n-A259FF?style=for-the-badge&logo=n8n&logoColor=white) *(團專已經做過了，有空補上)* |
 
 ---
 
